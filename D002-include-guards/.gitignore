@@ -1,0 +1,58 @@
+# Ignore build directories
+/build/
+/out/
+/bin/
+/lib/
+/CMakeBuild/
+.vs/
+out/
+# Ignore CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore Visual Studio Code files
+.vscode/
+CMakeTools/
+CMakePresets.json
+CMakeUserPresets.json
+
+# Ignore compiled object files and executables
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.a
+*.lib
+*.lo
+
+# Ignore logs and temporary files
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
+*.d
+
+# Ignore debugging and profiling files
+*.pdb
+*.ilk
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore generated dependency files
+*.dSYM/
+*.DS_Store
+
+# Ignore user-specific configuration files
+*.user
+*.session.vim
+*.idea/
+*.iml
+
+# Ignore C++ metadata
+*.gch
+*.pch
