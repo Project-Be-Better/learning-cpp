@@ -5,5 +5,4 @@ namespace svt
 {
     int square(int x);
 }
-
-#endif // SVT_UTILS_H
+#endif
