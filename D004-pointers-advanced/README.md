@@ -66,4 +66,3 @@ int main()
 
 ✅ **Next**: Dynamic arrays with pointer arithmetic, stack frame exploration, and class-based calculator using function pointers.
 
-🧠 Great progress today, Sree!
