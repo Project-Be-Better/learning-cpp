@@ -3,5 +3,5 @@
 
 void GNSSSimulator::sayHello()
 {
-    std::cout << "Hello from GNSS Simulator!" << std::endl;
+    std::cout << "[GNSS]: Hello from GNSS Simulator!" << std::endl;
 };

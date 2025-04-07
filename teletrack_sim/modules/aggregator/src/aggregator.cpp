@@ -3,5 +3,5 @@
 
 void Aggregator::sayHello()
 {
-    std::cout << "Hello from Aggrefator!" << std::endl;
+    std::cout << "[AGGREGATOR]: Hello from Aggregator!" << std::endl;
 };

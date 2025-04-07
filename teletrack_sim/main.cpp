@@ -1,22 +1,19 @@
-#include "calculator.h"
-#include <iostream>
+#include "gnss_simulator.h"
+#include "engine_simulator.h"
+#include "logger.h"
+#include "aggregator.h"
 
 int main()
 {
-    int a = 10, b = 5;
+    GNSSSimulator gnss_simulator;
+    EngineSimulator engine_simulator;
+    Logger logger;
+    Aggregator aggregator;
 
-    // Dispatch table
-    MathOp operations[] = {add, subtract, multiply, divide};
-
-    // Pointer to Pointer
-    int *resultPtr = new int;     // Dynamically allocate result to a pointer
-    int **doublePtr = &resultPtr; // Pointer to result pointer
-
-    *resultPtr = operations[0](a, b); // result of operation 0 (add) is stored into the value of resultPtr
-
-    std::cout << "Addition: " << **doublePtr << std::endl; // Dereference twice to get the value
-
-    delete resultPtr; // remove the pointer (no need to remove doublePtr?)
+    gnss_simulator.sayHello();
+    engine_simulator.sayHello();
+    logger.sayHello();
+    aggregator.sayHello();
 
     return 0;
-}
+};

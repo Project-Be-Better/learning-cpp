@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BUILD_DIR=build
-EXECUTABLE=main
+EXECUTABLE=teletrack_sim
 
 if [ "$1" == "clean" ]; then 
     echo "Cleaning up..."

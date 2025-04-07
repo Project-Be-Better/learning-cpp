@@ -3,5 +3,5 @@
 
 void Logger::sayHello()
 {
-    std::cout << "Hello from Logger!" << std::endl;
+    std::cout << "[LOGGER]: Hello from Logger!" << std::endl;
 };
