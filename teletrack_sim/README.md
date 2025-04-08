@@ -44,6 +44,7 @@ cmake ..
 cmake --build .
 ./teletrack_sim
 ```
+## CI Pipeline 
 
 ## 🧪 Testing Individual Modules
 
