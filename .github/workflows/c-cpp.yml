@@ -1,70 +1,78 @@
-name: C++ CI - TeleTrack Sim (Modular DAG)
+name: C++ CI - TeleTrack Sim (CMake DAG)
 
 on:
   push:
     paths:
       - "teletrack_sim/**"
-    branches: ["master"]
+    branches: ["master", "D00*"]
   pull_request:
     paths:
       - "teletrack_sim/**"
-    branches: ["master"]
+    branches: ["master", "D00*"]
 
 jobs:
   gnss:
-    name: Build GNSS Module
+    name: Configure + Build GNSS Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          g++ -std=c++17 -I modules/gnss/include \
-              modules/gnss/src/gnss_simulator.cpp \
-              -c -o gnss_simulator.o
+
+      - name: Configure GNSS
+        run: cmake -S modules/gnss -B build/gnss
+
+      - name: Build GNSS
+        run: cmake --build build/gnss
 
   engine:
-    name: Build Engine Module
+    name: Configure + Build Engine Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          g++ -std=c++17 -I modules/engine/include \
-              modules/engine/src/engine_simulator.cpp \
-              -c -o engine_simulator.o
+
+      - name: Configure Engine
+        run: cmake -S modules/engine -B build/engine
+
+      - name: Build Engine
+        run: cmake --build build/engine
 
   logger:
-    name: Build Logger Module
+    name: Configure + Build Logger Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          g++ -std=c++17 -I modules/logger/include \
-              modules/logger/src/logger.cpp \
-              -c -o logger.o
+
+      - name: Configure Logger
+        run: cmake -S modules/logger -B build/logger
+
+      - name: Build Logger
+        run: cmake --build build/logger
 
   aggregator:
-    name: Build Aggregator Module
+    name: Configure + Build Aggregator Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          g++ -std=c++17 -I modules/aggregator/include \
-              modules/aggregator/src/aggregator.cpp \
-              -c -o aggregator.o
+
+      - name: Configure Aggregator
+        run: cmake -S modules/aggregator -B build/aggregator
+
+      - name: Build Aggregator
+        run: cmake --build build/aggregator
 
   build-main:
-    name: Build & Run TeleTrack Sim
+    name: Build + Run Full App (CMake)
     needs: [gnss, engine, logger, aggregator]
     runs-on: ubuntu-latest
     defaults:
@@ -73,13 +81,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create Build Directory
-        run: mkdir -p build
+      - name: Cache full build
+        uses: actions/cache@v3
+        with:
+          path: teletrack_sim/build
+          key: main-${{ runner.os }}-${{ hashFiles('teletrack_sim/CMakeLists.txt') }}
 
-      - name: Configure with CMake
-        run: cmake -B build
+      - name: Configure Full Build
+        run: cmake -S . -B build
 
-      - name: Build the Full App
+      - name: Build Full App
         run: cmake --build build
 
       - name: Run App
