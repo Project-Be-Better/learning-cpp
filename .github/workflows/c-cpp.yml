@@ -2,12 +2,10 @@ name: C++ CI - TeleTrack Sim (CMake DAG)
 
 on:
   push:
-    paths:
-      - "teletrack_sim/**"
+    paths: ["teletrack_sim/**"]
     branches: ["master", "D00*"]
   pull_request:
-    paths:
-      - "teletrack_sim/**"
+    paths: ["teletrack_sim/**"]
     branches: ["master", "D00*"]
 
 jobs:
