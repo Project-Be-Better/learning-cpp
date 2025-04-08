@@ -17,7 +17,7 @@ on:
 
 jobs:
   gnss:
-    name: Configure + Build GNSS Module (CMake)
+    name: GNSS Module (CMake) Conf + Bld
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,7 +32,7 @@ jobs:
         run: cmake --build build/gnss
 
   engine:
-    name: Configure + Build Engine Module (CMake)
+    name: Engine Module (CMake) Conf + Bld
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -47,7 +47,7 @@ jobs:
         run: cmake --build build/engine
 
   logger:
-    name: Configure + Build Logger Module (CMake)
+    name: Logger Module (CMake) Conf + Bld
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -62,7 +62,7 @@ jobs:
         run: cmake --build build/logger
 
   aggregator:
-    name: Configure + Build Aggregator Module (CMake)
+    name: Aggregator Module (CMake) Conf + Bld
     runs-on: ubuntu-latest
     defaults:
       run:
