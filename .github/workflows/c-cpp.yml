@@ -2,11 +2,18 @@ name: C++ CI - TeleTrack Sim (CMake DAG)
 
 on:
   push:
-    paths: ["teletrack_sim/**"]
-    branches: ["master", "D00*"]
+    branches:
+      - master
+      - "D*"
+    paths:
+      - "teletrack_sim/**"
+      - ".github/workflows/**" # <- include this so workflow updates also trigger!
   pull_request:
-    paths: ["teletrack_sim/**"]
-    branches: ["master", "D00*"]
+    branches:
+      - master
+      - "D*"
+    paths:
+      - "teletrack_sim/**"
 
 jobs:
   gnss:
