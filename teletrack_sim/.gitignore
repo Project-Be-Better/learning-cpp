@@ -56,3 +56,20 @@ CMakeUserPresets.json
 # Ignore C++ metadata
 *.gch
 *.pch
+
+
+/build/
+/conan.lock
+conanbuild.sh
+conanrun.sh
+CMakeUserPresets.json
+CMakePresets.json
+conan_toolchain.cmake
+
+# Conan & CMake output
+/build/
+conan.lock
+*.cmake
+CMakeFiles/
+CMakeCache.txt
+conan*.sh
