@@ -1,13 +1,17 @@
-name: C++ CI - TeleTrackSim DAG
+name: C++ CI - TeleTrack Sim (CMake DAG + Conan)
 
 on:
   push:
-    branches: [ master, "D*" ]
+    branches:
+      - master
+      - "D*"
     paths:
       - "teletrack_sim/**"
       - ".github/workflows/**"
   pull_request:
-    branches: [ master, "D*" ]
+    branches:
+      - master
+      - "D*"
     paths:
       - "teletrack_sim/**"
 
@@ -64,67 +68,41 @@ jobs:
       - name: Build Aggregator
         run: cmake --build build/aggregator
 
-  step-checkout:
-    name: Checkout + Setup (Full App)
-    runs-on: ubuntu-latest
+  build-main:
+    name: Build + Run Full App (CMake + Conan)
     needs: [gnss, engine, logger, aggregator]
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Cache Conan packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.conan2/p
+          key: ${{ runner.os }}-conan-${{ hashFiles('**/conanfile.txt') }}
+
       - name: Install Conan
         run: pip install conan
-      - name: Detect Conan Profile
+
+      - name: Detect Conan profile
         run: conan profile detect --force
 
-  step-conan:
-    name: Conan Install Deps
-    runs-on: ubuntu-latest
-    needs: step-checkout
-    defaults:
-      run:
-        working-directory: teletrack_sim
-    steps:
-      - uses: actions/checkout@v4
-      - name: Conan Install
+      - name: Install Conan dependencies
         run: conan install . -of=build --build=missing --conf tools.cmake.cmaketoolchain:generator=False
 
-  step-cmake-configure:
-    name: CMake Configure (Full App)
-    runs-on: ubuntu-latest
-    needs: step-conan
-    defaults:
-      run:
-        working-directory: teletrack_sim
-    steps:
-      - uses: actions/checkout@v4
-      - name: CMake Configure
+      - name: Configure CMake with Conan Toolchain
         run: cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
 
-  step-cmake-build:
-    name: Build Full App
-    runs-on: ubuntu-latest
-    needs: step-cmake-configure
-    defaults:
-      run:
-        working-directory: teletrack_sim
-    steps:
-      - uses: actions/checkout@v4
-      - name: CMake Build
+      - name: Build Full App
         run: cmake --build build
 
-  step-run-app:
-    name: Run Application
-    runs-on: ubuntu-latest
-    needs: step-cmake-build
-    defaults:
-      run:
-        working-directory: teletrack_sim
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run App
+      - name: Run Application
         run: ./build/teletrack_sim
