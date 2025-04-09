@@ -56,3 +56,54 @@ CMakeUserPresets.json
 # Ignore C++ metadata
 *.gch
 *.pch
+
+
+/build/
+/conan.lock
+conanbuild.sh
+conanrun.sh
+CMakeUserPresets.json
+CMakePresets.json
+conan_toolchain.cmake
+
+# Conan & CMake output
+/build/
+conan.lock
+*.cmake
+CMakeFiles/
+CMakeCache.txt
+conan*.sh
+
+
+# Conan and CMake generated build folders
+build/
+.build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Conan output
+conan.lock
+conan*.sh
+conan*.txt
+conan*.cmake
+
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# VSCode and editor configs (optional)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Presets and misc
+CMakeUserPresets.json

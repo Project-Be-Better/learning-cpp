@@ -8,3 +8,4 @@
 | Day 4 | 2025-04-07 | Advanced Pointers – Stack vs Heap, Pointer to Pointer, Dispatch Table | Done   | [D004 Summary](./D004-pointers-advanced/README.md)     |
 | Day 5 | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling   | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md) |
 | Day 6 | 2025-04-08 | Project TeleTrackSim : CI Implementation                              | Done   | [D006 Summary](./D006-ci-implementation/README.md)     |
+| Day 7 | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                              | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)     |
