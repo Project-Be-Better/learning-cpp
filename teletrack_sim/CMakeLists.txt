@@ -3,6 +3,9 @@ project(TeleTrackSim)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# 🧪 Enable CTest-based unit testing
+enable_testing()
+
 # Conan 2.x integration via CMakeDeps
 find_package(PahoMqttCpp REQUIRED)
 
