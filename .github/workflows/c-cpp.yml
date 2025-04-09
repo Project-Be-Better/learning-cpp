@@ -1,4 +1,4 @@
-name: C++ CI - TeleTrack Sim (CMake DAG)
+name: C++ CI - TeleTrack Sim (CMake DAG + Conan)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - "D*"
     paths:
       - "teletrack_sim/**"
-      - ".github/workflows/**" # <- include this so workflow updates also trigger!
+      - ".github/workflows/**"
   pull_request:
     branches:
       - master
@@ -17,67 +17,59 @@ on:
 
 jobs:
   gnss:
-    name: GNSS Module (CMake) Conf + Bld
+    name: GNSS Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-
       - name: Configure GNSS
         run: cmake -S modules/gnss -B build/gnss
-
       - name: Build GNSS
         run: cmake --build build/gnss
 
   engine:
-    name: Engine Module (CMake) Conf + Bld
+    name: Engine Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-
       - name: Configure Engine
         run: cmake -S modules/engine -B build/engine
-
       - name: Build Engine
         run: cmake --build build/engine
 
   logger:
-    name: Logger Module (CMake) Conf + Bld
+    name: Logger Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-
       - name: Configure Logger
         run: cmake -S modules/logger -B build/logger
-
       - name: Build Logger
         run: cmake --build build/logger
 
   aggregator:
-    name: Aggregator Module (CMake) Conf + Bld
+    name: Aggregator Module (CMake)
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: teletrack_sim
     steps:
       - uses: actions/checkout@v4
-
       - name: Configure Aggregator
         run: cmake -S modules/aggregator -B build/aggregator
-
       - name: Build Aggregator
         run: cmake --build build/aggregator
 
   build-main:
-    name: Build + Run Full App (CMake)
+    name: Build + Run Full App (CMake + Conan)
     needs: [gnss, engine, logger, aggregator]
     runs-on: ubuntu-latest
     defaults:
@@ -86,17 +78,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cache full build
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache Conan packages
         uses: actions/cache@v3
         with:
-          path: teletrack_sim/build
-          key: main-${{ runner.os }}-${{ hashFiles('teletrack_sim/CMakeLists.txt') }}
+          path: ~/.conan2/p
+          key: ${{ runner.os }}-conan-${{ hashFiles('**/conanfile.txt') }}
 
-      - name: Configure Full Build
-        run: cmake -S . -B build
+      - name: Install Conan
+        run: pip install conan
+
+      - name: Detect Conan profile
+        run: conan profile detect --force
+
+      - name: Install Conan dependencies
+        run: conan install . -of=build --build=missing --conf tools.cmake.cmaketoolchain:generator=False
+
+      - name: Configure CMake with Conan Toolchain
+        run: cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
 
       - name: Build Full App
         run: cmake --build build
 
-      - name: Run App
+      - name: Run Application
         run: ./build/teletrack_sim
