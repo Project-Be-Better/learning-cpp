@@ -59,5 +59,6 @@
     "string_view": "cpp",
     "numbers": "cpp",
     "cinttypes": "cpp"
-  }
+  },
+  "cmake.sourceDirectory": "/home/thommankutty/learning-cpp/teletrack_sim"
 }
