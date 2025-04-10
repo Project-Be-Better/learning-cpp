@@ -2,12 +2,14 @@
     "configurations": [
         {
             "name": "WSL",
+            //  "compileCommands": "${workspaceFolder}/teletrack_sim/build/compile_commands.json",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/teletrack_sim/modules/gnss/include",
                 "${workspaceFolder}/teletrack_sim/build",
                 "/home/thommankutty/.conan2/p/gtest/**/include",
-                "/home/thommankutty/.conan2/p/b/paho-75dabddefaabf/p/include"
+                "/home/thommankutty/.conan2/p/b/paho-75dabddefaabf/p/include",
+                "/home/thommankutty/.conan2/p/b/paho-047000a52e9bf/p/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
