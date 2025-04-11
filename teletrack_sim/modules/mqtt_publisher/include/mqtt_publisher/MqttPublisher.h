@@ -1,26 +1,26 @@
 #pragma once
-#include "mqtt_publisher/IPublisher.h"
-#include <memory>
+
 #include <string>
+#include <memory>
 
 namespace mqtt
 {
-    class async_client; // Forward declare Paho MQTT client
+    class async_client; // Forward declaration
 }
 
-namespace teletrack_sim
+namespace teletrack
 {
 
-    class MqttPublisher : public IPublisher
+    class MqttPublisher
     {
     public:
         MqttPublisher(const std::string &serverUri, const std::string &clientId);
         ~MqttPublisher();
 
-        bool connect() override;
-        bool publish(const std::string &topic, const std::string &message, int qos = 0) override;
-        void disconnect() override;
-        bool isConnected() const override;
+        bool connect();
+        bool publish(const std::string &topic, const std::string &message, int qos = 0);
+        void disconnect();
+        bool isConnected() const;
 
     private:
         std::string serverUri_;
@@ -29,4 +29,4 @@ namespace teletrack_sim
         bool connected_;
     };
 
-} // namespace teletrack_sim
+}
