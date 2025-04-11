@@ -58,6 +58,22 @@
     "random": "cpp",
     "string_view": "cpp",
     "numbers": "cpp",
-    "cinttypes": "cpp"
-  }
+    "cinttypes": "cpp",
+    "charconv": "cpp",
+    "chrono": "cpp",
+    "condition_variable": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "ratio": "cpp",
+    "format": "cpp",
+    "iomanip": "cpp",
+    "mutex": "cpp",
+    "semaphore": "cpp",
+    "span": "cpp",
+    "sstream": "cpp",
+    "stop_token": "cpp",
+    "thread": "cpp",
+    "variant": "cpp"
+  },
+  "cmake.sourceDirectory": "/home/thommankutty/learning-cpp/teletrack_sim"
 }
