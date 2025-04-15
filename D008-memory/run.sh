@@ -7,14 +7,16 @@ VENV_DIR="venv"
 DO_CLEAN=false
 DO_TEST=false
 BUILD_ONLY=false
+RUN_DEMO=false
 
 function print_help {
   echo ""
-  echo "Usage: ./run.sh [--clean] [--test] [--build-only]"
+  echo "Usage: ./run.sh [--clean] [--test] [--build-only] [--run]"
   echo ""
   echo "  --clean        Remove build directory before building"
   echo "  --test         Run tests after building"
   echo "  --build-only   Skip tests after building"
+  echo "  --run          Run the memory_demo executable after building"
   echo "  --help         Show this help message"
   echo ""
   exit 0
@@ -32,11 +34,14 @@ for arg in "$@"; do
     --build-only)
       BUILD_ONLY=true
       ;;
+    --run)
+      RUN_DEMO=true
+      ;;
     --help)
       print_help
       ;;
     *)
-      echo "❌ Unknown argument: $arg"
+      echo "❌  Unknown argument: $arg"
       print_help
       ;;
   esac
@@ -81,7 +86,7 @@ echo "⚙️ Running cmake..."
 cmake .. -DCMAKE_TOOLCHAIN_FILE=Release/generators/conan_toolchain.cmake
 
 # === [8] Build ===
-echo "🔨 Building..."
+echo "🔨  Building..."
 cmake --build .
 
 # === [9] Optionally Run Tests ===
@@ -92,4 +97,10 @@ elif [ "$BUILD_ONLY" = true ]; then
   echo "✅  Build completed. Tests skipped (--build-only)."
 else
   echo "⚠️  Build completed. Tests not run. Use --test to run tests."
+fi
+
+# === [10] Optionally Run Demo ===
+if [ "$RUN_DEMO" = true ]; then
+  echo "🚀 Running memory demo..."
+  ./bin/memory_demo
 fi
