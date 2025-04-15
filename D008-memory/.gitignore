@@ -1,0 +1,48 @@
+# === Build folders ===
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Conan cache artifacts ===
+conan.lock
+conanbuildinfo.*
+graph_info.json
+*.cmake
+*.cmake.user
+
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# === Python virtual environment ===
+venv/
+.venv/
+
+# === Executables ===
+*.exe
+*.out
+*.app
+*.run
+*.so
+*.a
+*.o
+*.obj
+
+# === Logs ===
+*.log
+logs/
+
+# === Test artifacts ===
+Testing/
+CTestTestfile.cmake
+DartConfiguration.tcl
+
+# === OS/Editor junk ===
+.DS_Store
+Thumbs.db
+*.swp
+*~

@@ -13,6 +13,18 @@
       "cStandard": "gnu17",
       "cppStandard": "c++17",
       "intelliSenseMode": "linux-gcc-x64"
+    },
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/home/thommankutty/.conan2/p/b/gtestacd67e6db34e1/p/include"
+      ],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-x64"
     }
   ],
   "version": 4
