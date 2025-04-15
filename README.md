@@ -9,4 +9,4 @@
 | Day 5 | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling   | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md) |
 | Day 6 | 2025-04-08 | Project TeleTrackSim : CI Implementation                              | Done   | [D006 Summary](./D006-ci-implementation/README.md)     |
 | Day 7 | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                              | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)     |
-| Day 7 | 2025-04-15 | Raw Pointers                              | Done   | [D008 Summary](./D008-raw-pointers/README.md)     |
+| Day 8 | 2025-04-15 | Raw Pointers                              | Done   | [D008 Summary](./D008-raw-pointers/README.md)     |
