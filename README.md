@@ -24,4 +24,4 @@ Sree
 | Day 7 | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                              | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)     |
 | Day 8 | 2025-04-15 | Raw Pointers                              | Done   | [D008 Summary](./D008-raw-pointers/README.md)     |
 | Day 9 | 2025-04-16 | Re-Introduction to Programming                              | Done   | [D009 Summary](./D009/README.md)     |
-| Day 9 | 2025-04-19 | Introduction and Getting Started - Continued                              | Done   | [D010 Summary](./D010/README.md)     |
+| Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                              | Done   | [D010 Summary](./D010/README.md)     |
