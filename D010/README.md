@@ -15,5 +15,10 @@
 | [[Linker]]           | Linker combine all the object files and produce a desired output file<br><br>1. Go through each [[Object File]] and make sure they are valid <br><br>2. Checks for dependencies are resolved properly. If we define something in one cpp file and use it in another cpp file, linker connects it together. If the definition does not match the reference, it will create an error<br><br>3. Links one or more library files (Precompiled code that have been packaged up for reuse in other programs)<br><br>4. Outputs the desired output file<br> |![img](./img/image-2.png)|
 | [[Standard Library]] |                                                                                              |
 | [[Building]]         | Converting source code into executables that can be run. The result of build is called a build                                    |
-| [[Testing]]          | Makes sure that the programs work as expected                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| [[Testing]]          | Makes sure that the programs work as expected|
 
+
+## Hello World from VStudio2022
+Restarting for the n'th time, this time, more resilient than before. Completing the 10 hard days. Ofcourse, the first 1 million is the hardest, (that's how the mythlogy goes!)
+
+![img](./img/image.png)
