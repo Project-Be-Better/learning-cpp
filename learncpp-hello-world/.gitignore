@@ -1,0 +1,115 @@
+# Build directories
+/build/
+/build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/Makefile
+/install_manifest.txt
+/*.cmake
+
+# Conan
+/conan.lock
+/conanbuildinfo.*
+/conanfile.lock
+/cmake-build-*/       # If using CLion or similar
+
+# Test logs and outputs
+/Testing/
+/test-output/
+/test-results.xml
+/CTestTestfile.cmake
+
+# Compiled object files and binaries
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+
+# IDE configs
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+
+# Ninja files
+/build.ninja
+/.ninja_deps
+/.ninja_log
+
+
+# CMake build outputs
+[Cc]MakeCache.txt
+[Cc]MakeFiles/
+CMakeScripts/
+cmake-build-*/
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Testing/
+
+# Visual Studio (CMake-based)
+*.VC.db
+*.VC.opendb
+*.sdf
+*.suo
+*.ncb
+*.user
+*.userosscache
+*.sln.docstates
+ipch/
+.vs/
+*.opensdf
+*.log
+
+# Compiled binaries
+*.obj
+*.o
+*.lo
+*.la
+*.al
+*.libs
+*.dll
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
+*.app
+
+# Conan (if used)
+conan.lock
+conanfile.lock
+conanbuildinfo.*
+/conan/
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# System junk
+*.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+build-*/
+
+# Test logs/output
+*.tmp
+*.log
+test-output/
+test-results.xml
