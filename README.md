@@ -17,7 +17,20 @@ Sree
 
 I am using VS Studio Community after a long time and will be using it to get the muscle memory to be where my Python Muscle Memory now. Feels like going to the Gym because it feels deliberate, and it is ofcourse deliberate. I am in no way a born genius, perhaps an Ironman without the Bilionaire Philanthropy shenanigans but with matching passion!
 
-Live Long and Prosper!
+Live Long and Prosper!<br>
+BR<br>
+Sree
+
+## 20250422
+
+Feeling like a novice is a feeling that I hate the most, but one I must endure. I have started, restarted, pivoted, adjusted my strategy and finally have a feeling that I have the right source material with learncpp.com. I am also taking up my notes in Obsidian and using Dataview plugin to pull all my notes together. Some times, just going through the notes, I realize that the barrier is my brain itself. I am wondering how much more could I have learned if I assured myself I could do this before and was not impossible, although difficult. I must also manage the use of generative tools and use it wisely so that It does not hinder my ability to learn and stretch my ability rather than stifle it.
+
+Not sure what I am aiming for all this efforts though, although I must say that it feels good to learn an expand my thinking and thought process itself
+
+![img](./img/20250422.png)
+
+Let's Make Life Better, One Line at a Time!
+
 BR<br>
 Sree
 
