@@ -1,0 +1,63 @@
+# ---- General ----
+*.log
+*.DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# ---- CMake Build ----
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio CMake-specific
+CMakeUserPresets.json
+CMakeSettings.json
+.vs/
+
+# ---- Conan ----
+conan.lock
+conanbuildinfo.*
+conanfile.pyc
+conanfile.py~
+conanfile.txt~
+
+# ---- Visual Studio ----
+*.sln
+*.vcxproj*
+*.opensdf
+*.sdf
+*.user
+*.VC.db
+*.ncb
+*.suo
+*.ipch
+
+# ---- Compiled Binaries ----
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.out
+
+# ---- Test Output ----
+Testing/
+CTestTestfile.cmake
+test_detail.xml
+
+# ---- Coverage ----
+*.gcno
+*.gcda
+*.gcov
+
+# ---- Others ----
+*.idea/
+*.vscode/
+# Only ignore the build folder at root
+/build/
