@@ -1,7 +1,0 @@
-[requires]
-paho-mqtt-cpp/1.2.0
-gtest/1.14.0
-
-[generators]
-CMakeToolchain
-CMakeDeps
