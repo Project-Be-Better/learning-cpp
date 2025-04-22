@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	int x = 5;				// Definition of variable x
 	cout << "Hello CMake." << endl;
 	return 0;
 }
