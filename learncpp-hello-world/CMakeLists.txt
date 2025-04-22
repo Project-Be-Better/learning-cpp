@@ -11,6 +11,11 @@ endif()
 
 project ("learncpp-hello-world")
 
+# Specify the C++ standard and enforce strict compliance
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # Add source to this project's executable.
 add_executable (learncpp-hello-world "learncpp-hello-world.cpp" "learncpp-hello-world.h")
 
