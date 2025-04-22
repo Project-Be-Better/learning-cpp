@@ -49,4 +49,5 @@ Sree
 | Day 9  | 2025-04-16 | Re-Introduction to Programming                                        | Done   | [D009 Summary](./D009/README.md)                       |
 | Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                          | Done   | [D010 Summary](./D010/README.md)                       |
 | Day 11 | 2025-04-20 | Introduction and Getting Started - Continued                          | Done   | [D011 Summary](./D011/README.md)                       |
-| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Copiler Extensions       | Done   | [D012 Summary](./D012/README.md)                       |
+| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions      | Done   | [D012 Summary](./D012/README.md)                       |
+| Day 13 | 2025-04-23 | Structure of the program and Comments                                 | Done   | [D013 Summary](./D013/README.md)                       |
