@@ -14,9 +14,15 @@ So today is something extra ordinary and I am surprised and heartfelt by the amo
 2. Build and artifacts and source code are seperated as well
 3. Project is now bootstrappable
 4. We have a set of modules that can be stacked and can be compiled individually, which is the industry practice as well. So in theory, we will be having learncpp.com theory lessons as well as work here
-5. Added Conan for package management and added it to the build script to manage the dependencies. Now it will create a venv, activate it, find conan and install it if wasnt and then proceed to install the packages necessary for the build
+5. Added Conan for package management and added it to the build script to manage the dependencies.
+   - Now it will create a venv, activate it
+   - Find conan and install it if wasnt
+   - Install the packages necessary for the build
 
 ## Improvements
 
-1. I need to add flags for the bash script so that I can run it in various modes like --build or --clean or --release
+1. I need to add flags for the bash script so that I can run it in various modes like:
+   - --build
+   - --clean
+   - --release
 2. The shell script was renamed to `build.sh` to reflect the actual nature of the file. We are not working in WSL as of now
