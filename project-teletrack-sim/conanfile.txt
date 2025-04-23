@@ -1,0 +1,12 @@
+[requires]
+gtest/1.14.0          # GoogleTest for unit testing
+
+[generators]
+CMakeToolchain        # Generates a toolchain file for CMake
+CMakeDeps             # Generates dependency finders for CMake
+
+[layout]
+cmake_layout          # Standard CMake project folder structure support
+
+#[tool_requires]
+#cmake/3.28.3          # Optional: pin a specific CMake version (recommended for compatibility)

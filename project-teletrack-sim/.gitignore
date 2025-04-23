@@ -61,3 +61,4 @@ test_detail.xml
 *.vscode/
 # Only ignore the build folder at root
 /build/
+/.venv-conan
