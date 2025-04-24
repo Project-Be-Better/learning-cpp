@@ -52,3 +52,4 @@ Sree
 | Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions                       | Done   | [D012 Summary](./D012/README.md)                       |
 | Day 13 | 2025-04-23 | Structure of the program and Comments + Introduction to Variables and Objects          | Done   | [D013 Summary](./D013/README.md)                       |
 | Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)  |
+| Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                       |
