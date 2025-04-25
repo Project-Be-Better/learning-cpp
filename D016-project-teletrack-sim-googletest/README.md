@@ -1,6 +1,9 @@
 # Google Test
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pxJoVRfpRPE?si=IVZuXCdCV7AbuEMR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+GoogleTest is Google’s C++ testing and mocking framework
+
+1. https://google.github.io/googletest/
+2. https://www.youtube.com/watch?v=pxJoVRfpRPE
 
 # D016 20250425
 
