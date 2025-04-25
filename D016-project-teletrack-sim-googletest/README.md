@@ -1,3 +1,12 @@
+| **Concept**         | **Note**                                                                                                                                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IO library**      | The input/output library (IO library) is part of the C++ standard library that deals with basic input and output. We use this library to get input from the keyboard and output data to the console. |
+| **std::cout**       | Allows us to send data to the console to be printed as text. <br>**Note**: `std::cout` is buffered.                                                                                                  |
+| **std::endl**       | Outputs a newline and flushes the output buffer.                                                                                                                                                     |
+| **std::cin**        | Stands for "character input" and is used to read input from the keyboard.                                                                                                                            |
+| **<<** (Insertion)  | Insertion operator. Used with `std::cout` to send data **to** the console. Direction of data: `cout << data`.                                                                                        |
+| **>>** (Extraction) | Extraction operator. Used with `std::cin` to read data **from** the user. Direction of data: `cin >> variable`.                                                                                      |
+
 # Google Test
 
 GoogleTest is Google’s C++ testing and mocking framework

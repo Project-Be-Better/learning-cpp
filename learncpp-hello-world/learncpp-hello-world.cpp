@@ -2,20 +2,33 @@
 //
 
 #include "learncpp-hello-world.h"
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-	int x = 5;				// Definition of variable x
-	cout << "Hello CMake." << endl;
+	// STD::COUT 
 
+	//Can include text 
+	std::cout << "Hello World \n";
 
+	// Can include numbers 
+	std::cout << 4 << std::endl;	// Causes the cursor to move to the new line  
 
-	int width; 
-	width = 5;
+	// Print the valuye of variables
+	int z{ 5 };						// Defines the integer 5
+	std::cout << z;					// Prints the value to the console
 
-	int height { 6 };
+	// STD CIN
+	std::cout << "\nEnter two numbers seperated by space\n";
 
-	return 0;
+	int x{};
+	int y{};
+
+	std::cin >> x >> y;
+	std::cout << "You have entered " << x
+		<< " and " << y << "\n";
+	return 0; 
+
 }
