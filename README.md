@@ -34,22 +34,39 @@ Let's Make Life Better, One Line at a Time!
 BR<br>
 Sree
 
+# 20250425 D016
+
+So Project Teletrack Sim is my struggle and tribulations in understanding my new assignment and final frontier of programming languages as far as I am concerned, C++. I am doing this as a project to get two birds with one stone: Understanding the Project I am working on as a new Embedded Engineer and Face off with the long dreaded C++ and conquer it.
+
+While at it, I want to do it in style and follow industry standards. So I am using the following:
+
+1. CMake as the build tool
+2. Conan for dependency Managment
+3. GTest for Unit Testing Management
+
+There will be CI and even CD coming up soon and there will be more to come. Hopefully there is something to the deliberate practice that I have believed in my entire adult life
+
+Live Long and Prosper<br>
+BR<br>
+Sree
+
 # Log
 
-| Day    | Date       | Topic                                                                                  | Status | Code Example / Link                                    |
-| ------ | ---------- | -------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------ |
-| Day 1  | 2025-03-30 | Header Files, Guards, Cmake                                                            | Done   | [D001 Summary](./D001-header-files/README.md)          |
-| Day 2  | 2025-03-31 | Include Guards & MISRA-Safe Headers                                                    | Done   | [D002 Summary](./D002-include-guards/README.md)        |
-| Day 3  | 2025-04-05 | Pointers                                                                               | Done   | [D003 Summary](./D003-pointers/README.md)              |
-| Day 4  | 2025-04-07 | Advanced Pointers – Stack vs Heap, Pointer to Pointer, Dispatch Table                  | Done   | [D004 Summary](./D004-pointers-advanced/README.md)     |
-| Day 5  | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling                    | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md) |
-| Day 6  | 2025-04-08 | Project TeleTrackSim : CI Implementation                                               | Done   | [D006 Summary](./D006-ci-implementation/README.md)     |
-| Day 7  | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                        | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)     |
-| Day 8  | 2025-04-15 | Raw Pointers                                                                           | Done   | [D008 Summary](./D008-raw-pointers/README.md)          |
-| Day 9  | 2025-04-16 | Re-Introduction to Programming                                                         | Done   | [D009 Summary](./D009/README.md)                       |
-| Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                                           | Done   | [D010 Summary](./D010/README.md)                       |
-| Day 11 | 2025-04-20 | Introduction and Getting Started - Continued                                           | Done   | [D011 Summary](./D011/README.md)                       |
-| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions                       | Done   | [D012 Summary](./D012/README.md)                       |
-| Day 13 | 2025-04-23 | Structure of the program and Comments + Introduction to Variables and Objects          | Done   | [D013 Summary](./D013/README.md)                       |
-| Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)  |
-| Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                       |
+| Day    | Date       | Topic                                                                                  | Status | Code Example / Link                                               |
+| ------ | ---------- | -------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------- |
+| Day 1  | 2025-03-30 | Header Files, Guards, Cmake                                                            | Done   | [D001 Summary](./D001-header-files/README.md)                     |
+| Day 2  | 2025-03-31 | Include Guards & MISRA-Safe Headers                                                    | Done   | [D002 Summary](./D002-include-guards/README.md)                   |
+| Day 3  | 2025-04-05 | Pointers                                                                               | Done   | [D003 Summary](./D003-pointers/README.md)                         |
+| Day 4  | 2025-04-07 | Advanced Pointers – Stack vs Heap, Pointer to Pointer, Dispatch Table                  | Done   | [D004 Summary](./D004-pointers-advanced/README.md)                |
+| Day 5  | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling                    | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md)            |
+| Day 6  | 2025-04-08 | Project TeleTrackSim : CI Implementation                                               | Done   | [D006 Summary](./D006-ci-implementation/README.md)                |
+| Day 7  | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                        | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)                |
+| Day 8  | 2025-04-15 | Raw Pointers                                                                           | Done   | [D008 Summary](./D008-raw-pointers/README.md)                     |
+| Day 9  | 2025-04-16 | Re-Introduction to Programming                                                         | Done   | [D009 Summary](./D009/README.md)                                  |
+| Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                                           | Done   | [D010 Summary](./D010/README.md)                                  |
+| Day 11 | 2025-04-20 | Introduction and Getting Started - Continued                                           | Done   | [D011 Summary](./D011/README.md)                                  |
+| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions                       | Done   | [D012 Summary](./D012/README.md)                                  |
+| Day 13 | 2025-04-23 | Structure of the program and Comments + Introduction to Variables and Objects          | Done   | [D013 Summary](./D013/README.md)                                  |
+| Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)             |
+| Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
+| Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
