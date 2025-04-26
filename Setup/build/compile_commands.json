@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/g++ -I../modules/gnss_simulator/include -m64 -O3 -DNDEBUG -std=c++2a -o CMakeFiles/project_teletrack_sim.dir/src/main.cpp.o -c /app/src/main.cpp",
+  "file": "/app/src/main.cpp"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/g++ -I../modules/gnss_simulator/include -isystem /root/.conan/data/gtest/1.14.0/_/_/package/7bb7187da22c177b9f9338bffb272db454cdd467/include -m64 -O3 -DNDEBUG -std=c++2a -o modules/gnss_simulator/CMakeFiles/test_gnss.dir/tests/test_gnss.cpp.o -c /app/modules/gnss_simulator/tests/test_gnss.cpp",
+  "file": "/app/modules/gnss_simulator/tests/test_gnss.cpp"
+},
+{
+  "directory": "/app/build",
+  "command": "/usr/bin/g++ -I../modules/gnss_simulator/include -m64 -O3 -DNDEBUG -std=c++2a -o modules/gnss_simulator/CMakeFiles/gnss_simulator.dir/src/gnss.cpp.o -c /app/modules/gnss_simulator/src/gnss.cpp",
+  "file": "/app/modules/gnss_simulator/src/gnss.cpp"
+}
+]
