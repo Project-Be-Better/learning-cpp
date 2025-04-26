@@ -1,0 +1,6 @@
+# Exclude build artifacts and vendored GoogleTest
+build/
+external/
+.git
+.gitignore
+docker-compose.yml
