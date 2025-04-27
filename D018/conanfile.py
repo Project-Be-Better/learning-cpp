@@ -14,4 +14,5 @@ class ProjectTeletrackSimRecipe(ConanFile):
         # self.requires("fmt/10.1.1")
         # self.requires("sfml/2.6.1")
         # self.requires("poco/1.13.3")
-        self.requires("gtest/1.14.0")
+        # self.requires("gtest/1.14.0")
+        pass
