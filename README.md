@@ -70,4 +70,5 @@ Sree
 | Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)             |
 | Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
 | Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
-| Day 17 | 2025-04-25 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
+| Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
+| Day 17 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-Factory/README.md)                      |
