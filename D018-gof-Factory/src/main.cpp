@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Ship.h"
+#include "Car.h"
 // #include "gnss.h"
 
 // PRODUCT
@@ -89,6 +91,23 @@ void ClientCode(const Creator &creator)
               << creator.SomeOperation() << std::endl;
 }
 
+void operateTransport(Transport &transport)
+{
+    std::cout << "---------\n";
+    std::cout << "Transport Type: " << transport.type() << "\n";
+    std::cout << "Max load capacity: " << transport.maxLoadCapacity() << "\n";
+    std::cout << "Starting deliveries: " << "\n";
+
+    for (size_t i = 0; i < 6; ++i)
+    {
+        /* code */
+        transport.performDelivery(100);
+        std::cout << "After delivery: " << (i + 1) << " Needs maintenance? " << (transport.needsMaintenance() ? "Yes" : "No") << "\n";
+    }
+
+    std::cout << "" << "\n";
+};
+
 int main()
 {
     std::cout << "App launched with Concrete Creator \n";
@@ -103,6 +122,13 @@ int main()
 
     delete creator1;
     delete creator2;
+
+    std::cout << "------------------------ \n";
+    Car car;
+    Ship ship;
+
+    operateTransport(car);
+    operateTransport(ship);
 
     return 0;
 }
