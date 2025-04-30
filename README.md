@@ -21,7 +21,7 @@
 | Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
 | Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
 | Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
-| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-factory/README.md)                      |
+| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-Factory/README.md)                      |
 | Day 19 | 2025-04-28 | Starting with Design Pattern (GoF) : Observer Pattern                                  | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
 | Day 20 | 2025-04-30 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D020 Summary](./D019-gof-observer/README.md)                     |
 
@@ -79,7 +79,7 @@ Sree
 
 Today, I have been getting my brain soaked into the world of design patterns. There are about 23 of these patterns I am documenting it one by one. The idea is that I understand it so that I can better explain it for my presentation for the NUS Mtech for SWE5001.
 
-Design patterns are facinating for me. The way programmers found a way to abstract the idea so that it is reusable in a sense is fascinating for me. Although I will study it even though I do not get paid, the hope that I will be a better version of me through this and everything motivates me a lot.
+Design patterns are facinating for me. The way programmers found a way to abstract the idea so that it is reusable in a sense is wild. Although I will study it even though I do not get paid, the hope that I will be a better version of me through this and everything motivates me a lot.
 
 So far, I have covered Factory Method and Observer Pattern. Both of them are interesting in its own ways, but I try to remember it by a quintessential example.
 
