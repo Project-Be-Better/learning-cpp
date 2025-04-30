@@ -23,7 +23,7 @@
 | Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
 | Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-factory/README.md)                      |
 | Day 19 | 2025-04-28 | Starting with Design Pattern (GoF) : Observer Pattern                                  | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
-| Day 20 | 2025-04-28 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
+| Day 20 | 2025-04-30 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
 
 # Note :
 
