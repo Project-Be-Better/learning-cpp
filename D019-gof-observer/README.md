@@ -1,5 +1,4 @@
-![img](./img/concept.png)
-
+![](./img/concept.png)
 # C++ Observer Pattern – Learning Summary
 
 This document summarizes key learnings, doubts, clarifications, and best practices encountered while implementing and debugging the **Observer Pattern** in C++.
