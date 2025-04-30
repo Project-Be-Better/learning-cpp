@@ -89,6 +89,6 @@ Observer Pattern : You create Publisher(Subject) which can be subscribed to by a
 
 Reshu, if you are reading this, Thank you for motivating me and being the light of my life. (This is a bonus for you if you ever read this repo :)
 
-Dare enough to be a fool today so that I can be a self-chiselled genius of tomorrow<br>
+Dare enough to be a fool today so that I can be a self-chiseled genius tomorrow<br>
 BR<br>
 Sree
