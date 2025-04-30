@@ -1,5 +1,30 @@
 # 📚 Learning C++ Progress Tracker
 
+# Log
+
+| Day    | Date       | Topic                                                                                  | Status | Code Example / Link                                               |
+| ------ | ---------- | -------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------- |
+| Day 1  | 2025-03-30 | Header Files, Guards, Cmake                                                            | Done   | [D001 Summary](./D001-header-files/README.md)                     |
+| Day 2  | 2025-03-31 | Include Guards & MISRA-Safe Headers                                                    | Done   | [D002 Summary](./D002-include-guards/README.md)                   |
+| Day 3  | 2025-04-05 | Pointers                                                                               | Done   | [D003 Summary](./D003-pointers/README.md)                         |
+| Day 4  | 2025-04-07 | Advanced Pointers – Stack vs Heap, Pointer to Pointer, Dispatch Table                  | Done   | [D004 Summary](./D004-pointers-advanced/README.md)                |
+| Day 5  | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling                    | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md)            |
+| Day 6  | 2025-04-08 | Project TeleTrackSim : CI Implementation                                               | Done   | [D006 Summary](./D006-ci-implementation/README.md)                |
+| Day 7  | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                        | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)                |
+| Day 8  | 2025-04-15 | Raw Pointers                                                                           | Done   | [D008 Summary](./D008-raw-pointers/README.md)                     |
+| Day 9  | 2025-04-16 | Re-Introduction to Programming                                                         | Done   | [D009 Summary](./D009/README.md)                                  |
+| Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                                           | Done   | [D010 Summary](./D010/README.md)                                  |
+| Day 11 | 2025-04-20 | Introduction and Getting Started - Continued                                           | Done   | [D011 Summary](./D011/README.md)                                  |
+| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions                       | Done   | [D012 Summary](./D012/README.md)                                  |
+| Day 13 | 2025-04-23 | Structure of the program and Comments + Introduction to Variables and Objects          | Done   | [D013 Summary](./D013/README.md)                                  |
+| Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)             |
+| Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
+| Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
+| Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
+| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-factory/README.md)                      |
+| Day 19 | 2025-04-28 | Starting with Design Pattern (GoF) : Observer Pattern                                  | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
+| Day 20 | 2025-04-28 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
+
 # Note :
 
 ## 20250415
@@ -50,27 +75,20 @@ Live Long and Prosper<br>
 BR<br>
 Sree
 
-# Log
+## 20250430 D020
 
-| Day    | Date       | Topic                                                                                  | Status | Code Example / Link                                               |
-| ------ | ---------- | -------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------- |
-| Day 1  | 2025-03-30 | Header Files, Guards, Cmake                                                            | Done   | [D001 Summary](./D001-header-files/README.md)                     |
-| Day 2  | 2025-03-31 | Include Guards & MISRA-Safe Headers                                                    | Done   | [D002 Summary](./D002-include-guards/README.md)                   |
-| Day 3  | 2025-04-05 | Pointers                                                                               | Done   | [D003 Summary](./D003-pointers/README.md)                         |
-| Day 4  | 2025-04-07 | Advanced Pointers – Stack vs Heap, Pointer to Pointer, Dispatch Table                  | Done   | [D004 Summary](./D004-pointers-advanced/README.md)                |
-| Day 5  | 2025-04-08 | Project Kickoff – Modular Architecture, Handshake Pattern & Tooling                    | Done   | [D005 Summary](./D005-teletrack-sim-kickoff/README.md)            |
-| Day 6  | 2025-04-08 | Project TeleTrackSim : CI Implementation                                               | Done   | [D006 Summary](./D006-ci-implementation/README.md)                |
-| Day 7  | 2025-04-09 | Project TeleTrackSim : GoogleTest, CMake, and Conan Integration                        | Done   | [D007 Summary](./D007-gtest-cmake-conan/README.md)                |
-| Day 8  | 2025-04-15 | Raw Pointers                                                                           | Done   | [D008 Summary](./D008-raw-pointers/README.md)                     |
-| Day 9  | 2025-04-16 | Re-Introduction to Programming                                                         | Done   | [D009 Summary](./D009/README.md)                                  |
-| Day 10 | 2025-04-19 | Introduction and Getting Started - Continued                                           | Done   | [D010 Summary](./D010/README.md)                                  |
-| Day 11 | 2025-04-20 | Introduction and Getting Started - Continued                                           | Done   | [D011 Summary](./D011/README.md)                                  |
-| Day 12 | 2025-04-22 | Introduction and Getting Started - Continued Compiler Extensions                       | Done   | [D012 Summary](./D012/README.md)                                  |
-| Day 13 | 2025-04-23 | Structure of the program and Comments + Introduction to Variables and Objects          | Done   | [D013 Summary](./D013/README.md)                                  |
-| Day 14 | 2025-04-23 | Setting Skeleton for the Teletrack Sim Project + Conan and GTest with Build Automation | Done   | [D014 Summary](./D014-Teletrack-Sim-Reboot/README.md)             |
-| Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
-| Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
-| Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
-| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-factory/README.md)                      |
-| Day 19 | 2025-04-28 | Starting with Design Pattern (GoF) : Observer Pattern                                  | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
-| Day 20 | 2025-04-28 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
+Today, I have been getting my brain soaked into the world of design patterns. There are about 23 of these patterns I am documenting it one by one. The idea is that I understand it so that I can better explain it for my presentation for the NUS Mtech for SWE5001.
+
+Design patterns are facinating for me. The way programmers found a way to abstract the idea so that it is reusable in a sense is fascinating for me. Although I will study it even though I do not get paid, the hope that I will be a better version of me through this and everything motivates me a lot.
+
+So far, I have covered Factory Method and Observer Pattern. Both of them are interesting in its own ways, but I try to remember it by a quintessential example.
+
+Factory Method : You abstract the logic to a point that there are
+
+Observer Pattern : You create Publisher(Subject) which can be subscribed to by a n number of subscribers(Observers).
+
+Reshu, if you are reading this, Thank you for motivating me and being the light of my life. (This is a bonus for you if you ever read this repo :)
+
+Dare enough to be a fool today so that I can be a self-chiselled genius of tomorrow
+BR<br>
+Sree
