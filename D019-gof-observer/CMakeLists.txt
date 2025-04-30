@@ -9,6 +9,7 @@ project(project_teletrack_sim
 # Add the executable
 add_executable(project_teletrack_sim
     src/main.cpp
+    src/observer.cpp
 )
 
 # Tell the compiler where to find headers
