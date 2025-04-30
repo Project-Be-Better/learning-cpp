@@ -79,7 +79,7 @@ Sree
 
 Today, I have been getting my brain soaked into the world of design patterns. There are about 23 of these patterns I am documenting it one by one. The idea is that I understand it so that I can better explain it for my presentation for the NUS Mtech for SWE5001.
 
-Design patterns are facinating for me. The way programmers found a way to abstract the idea so that it is reusable in a sense is fascinating for me. Although I will study it even though I do not get paid, the hope that I will be a better version of me through this and everything motivates me a lot.
+Design patterns are facinating for me. The way programmers found a way to abstract the idea so that it is reusable in a sense is wild. Although I will study it even though I do not get paid, the hope that I will be a better version of me through this and everything motivates me a lot.
 
 So far, I have covered Factory Method and Observer Pattern. Both of them are interesting in its own ways, but I try to remember it by a quintessential example.
 
