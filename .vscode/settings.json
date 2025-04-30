@@ -59,6 +59,8 @@
     "string_view": "cpp",
     "numbers": "cpp",
     "cinttypes": "cpp",
-    "sstream": "cpp"
-  }
+    "sstream": "cpp",
+    "list": "cpp"
+  },
+  "cmake.sourceDirectory": "D:/learning-projects/learning-cpp/D019-observer"
 }
