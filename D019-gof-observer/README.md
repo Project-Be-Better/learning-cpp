@@ -1,4 +1,4 @@
-![](./img/concept.png)
+![img](./img/concept.png)
 
 # C++ Observer Pattern – Learning Summary
 
