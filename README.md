@@ -34,7 +34,7 @@ Let's Make Life Better, One Line at a Time!
 BR<br>
 Sree
 
-##  20250425 D016
+## 20250425 D016
 
 So Project Teletrack Sim is my struggle and tribulations in understanding my new assignment and final frontier of programming languages as far as I am concerned, C++. I am doing this as a project to get two birds with one stone: Understanding the Project I am working on as a new Embedded Engineer and Face off with the long dreaded C++ and conquer it.
 
@@ -71,4 +71,5 @@ Sree
 | Day 15 | 2025-04-24 | Understanding Variables and Assignments                                                | Done   | [D015 Summary](./D015/README.md)                                  |
 | Day 16 | 2025-04-25 | Project Teletrack Sim Spinoff                                                          | Done   | [D016 Summary](./D016-project-teletrack-sim-googletest/README.md) |
 | Day 17 | 2025-04-26 | Understanding Conan in depth                                                           | Done   | [D017 Summary](./D017-conan-indepth/README.md)                    |
-| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-Factory/README.md)                      |
+| Day 18 | 2025-04-27 | Starting with Design Pattern (GoF) : Factory Method                                    | Done   | [D018 Summary](./D018-gof-factory/README.md)                      |
+| Day 19 | 2025-04-28 | Starting with Design Pattern (GoF) : Observer Pattern                                  | Done   | [D019 Summary](./D019-gof-observer/README.md)                     |
