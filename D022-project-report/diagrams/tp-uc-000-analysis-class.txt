@@ -1,5 +1,6 @@
 @startuml
 title TP-UC-000 – View Landing Page (Analysis)
+
 skinparam style strictuml
 skinparam shadowing false
 skinparam class {
@@ -21,20 +22,37 @@ skinparam stereotype {
   CBorderColor<<entity>> #2E8B57
 }
 
-class "LandingPageController" <<boundary>> {
-  + showLandingPage()
+class "App" <<boundary>> {
+  + render()
 }
 
-class "LandingPageService" <<control>> {
-  + getLandingContent()
+class "Navbar" <<boundary>> {
+  + render()
+  + showLoginButton(): boolean
 }
 
-class "LandingPageContent" <<entity>> {
-  + heroBanner: string
-  + categoryGrid: List<Category>
-  + featureSections: List<String>
+class "Home" <<boundary>> {
+  + render()
 }
 
-LandingPageController --> LandingPageService
-LandingPageService --> LandingPageContent
+class "LandingSections\n(Hero, Grid, Features)" as Sections <<boundary>> {
+  + render()
+}
+
+class "AuthService" <<control>> {
+  + isAuthenticated(): boolean
+}
+
+class "User" <<entity>> {
+  + id: string
+  + role: string
+  + token: string
+}
+
+App --> Navbar : renders >
+App --> Home : renders >
+Navbar --> AuthService : checks auth >
+AuthService --> User : verifies session >
+Home --> Sections : renders sections >
+
 @enduml
