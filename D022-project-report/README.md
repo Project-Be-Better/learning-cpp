@@ -1,3 +1,1 @@
-# Use Cases
-
-![](./img/usecases-auth-rbac.png)
+This week is the report submission of my university, So I think I will make an exception here and consider this as another day of C++ learning as I am essentially reinforcing the 4+1 model concept and GoF patterns
