@@ -1,5 +1,5 @@
 @startuml
-title TP-UC-000 – View Landing Page (Design Sequence Diagram with UML Stereotypes)
+title TP-UC-000 – View Landing Page (Design)
 
 skinparam style strictuml
 skinparam shadowing false
