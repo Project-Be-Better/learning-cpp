@@ -1,0 +1,70 @@
+@startuml
+title TP-UC-001 – Login via Google (Design)
+
+skinparam style strictuml
+skinparam shadowing false
+skinparam DefaultFontName "Segoe UI"
+skinparam SequenceMessageAlign center
+
+skinparam participant {
+  BackgroundColor<<component>> #EAF2F8
+  BorderColor<<component>> #2D3C50
+
+  BackgroundColor<<control>> #FFF5CC
+  BorderColor<<control>> #DAA520
+
+  BackgroundColor<<model>> #E0FFE0
+  BorderColor<<model>> #2E8B57
+
+  FontName "Segoe UI"
+  FontColor black
+}
+
+skinparam actor {
+  BackgroundColor #FADBD8
+  BorderColor black
+  FontColor black
+  FontName "Segoe UI"
+}
+
+actor Guest
+
+participant "LoginComponent" <<component>>
+control "AuthService" <<control>>
+entity "User" <<model>>
+entity "JWT" <<model>>
+
+Guest -> LoginComponent : Clicks "Login with Google"
+activate LoginComponent
+
+LoginComponent -> AuthService : validateGoogleToken(token)
+activate AuthService
+
+AuthService -> User : lookup/verify by email
+activate User
+User --> AuthService : user data
+deactivate User
+
+AuthService -> JWT : generate token
+activate JWT
+JWT --> AuthService : token object
+deactivate JWT
+
+AuthService --> LoginComponent : return JWT
+deactivate AuthService
+
+LoginComponent -> LoginComponent : dispatchToken(jwt)
+LoginComponent --> Guest : redirect to dashboard
+deactivate LoginComponent
+
+note right of JWT
+Includes payload {email, role} and expiry timestamp.
+Used in all future API calls for authorization.
+end note
+
+note right of LoginComponent
+Uses Google OAuth client SDK to obtain token, 
+Stores JWT in Redux store.
+end note
+
+@enduml

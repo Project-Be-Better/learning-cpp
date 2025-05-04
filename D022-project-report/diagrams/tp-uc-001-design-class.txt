@@ -1,0 +1,83 @@
+@startuml
+title TP-UC-001 – Login via Google (Design)
+
+skinparam style strictuml
+skinparam shadowing false
+skinparam class {
+  FontName "Segoe UI"
+  BackgroundColor #FDFEFE
+  BorderColor black
+  ArrowColor #2D3C50
+}
+
+skinparam stereotype {
+  CBackgroundColor<<component>> #EAF2F8
+  CBorderColor<<component>> #2D3C50
+
+  CBackgroundColor<<control>> #FFF5CC
+  CBorderColor<<control>> #DAA520
+
+  CBackgroundColor<<model>> #E0FFE0
+  CBorderColor<<model>> #2E8B57
+}
+
+'--- Frontend Component ---
+class "LoginComponent" <<component>> {
+  + handleGoogleLogin(): void
+  + dispatchToken(token: string): void
+}
+
+'--- Control Logic ---
+class "AuthService" <<control>> {
+  + validateGoogleToken(token: string): User
+  + generateJWT(user: User): JWT
+}
+
+'--- Domain Models ---
+class "User" <<model>> {
+  + email: string
+  + role: string
+  + registered: boolean
+}
+
+class "Retailer" <<model>>
+class "Wholesaler" <<model>>
+class "Admin" <<model>>
+
+User <|-- Retailer
+User <|-- Wholesaler
+User <|-- Admin
+
+'--- JWT Representation ---
+class "JWT" <<model>> {
+  + token: string
+  + payload: { email: string, role: string }
+  + expiry: Date
+}
+
+'--- Relationships ---
+LoginComponent --> AuthService : validateGoogleToken()
+AuthService --> User : lookup/verify
+AuthService --> JWT : create()
+JWT --> LoginComponent : return to store
+
+'--- Transition Notes ---
+note right of LoginComponent
+Replaces LoginPage boundary class.
+Implements Google login using frontend SDK,
+and dispatches JWT to Redux store.
+end note
+
+note right of JWT
+JWT entity in analysis is now modeled
+with real payload and expiry fields.
+Token includes user's role for RBAC.
+end note
+
+note right of AuthService
+Carries control responsibilities from analysis
+Token validation logic may call backend APIs
+or directly verify ID tokens in frontend (if public keys are used).
+end note
+
+@enduml
