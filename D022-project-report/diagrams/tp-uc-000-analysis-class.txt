@@ -1,0 +1,40 @@
+@startuml
+title TP-UC-000 – View Landing Page (Analysis)
+skinparam style strictuml
+skinparam shadowing false
+skinparam class {
+  FontName "Segoe UI"
+  FontColor black
+  BackgroundColor #FDFEFE
+  BorderColor black
+  ArrowColor #2D3C50
+}
+
+skinparam stereotype {
+  CBackgroundColor<<boundary>> #EAF2F8
+  CBorderColor<<boundary>> #2D3C50
+
+  CBackgroundColor<<control>> #FFF5CC
+  CBorderColor<<control>> #DAA520
+
+  CBackgroundColor<<entity>> #E0FFE0
+  CBorderColor<<entity>> #2E8B57
+}
+
+class "LandingPageController" <<boundary>> {
+  + showLandingPage()
+}
+
+class "LandingPageService" <<control>> {
+  + getLandingContent()
+}
+
+class "LandingPageContent" <<entity>> {
+  + heroBanner: string
+  + categoryGrid: List<Category>
+  + featureSections: List<String>
+}
+
+LandingPageController --> LandingPageService
+LandingPageService --> LandingPageContent
+@enduml
