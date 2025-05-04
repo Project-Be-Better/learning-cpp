@@ -1,11 +1,10 @@
 @startuml
-title TP-UC-000 – View Landing Page (Analysis)
+title TP-UC-001 – Login via Google (Analysis)
 
 skinparam style strictuml
 skinparam shadowing false
 skinparam class {
   FontName "Segoe UI"
-  FontColor black
   BackgroundColor #FDFEFE
   BorderColor black
   ArrowColor #2D3C50
@@ -22,37 +21,37 @@ skinparam stereotype {
   CBorderColor<<entity>> #2E8B57
 }
 
-class "App" <<boundary>> {
-  + render()
-}
-
-class "Navbar" <<boundary>> {
-  + render()
-  + showLoginButton(): boolean
-}
-
-class "Home" <<boundary>> {
-  + render()
-}
-
-class "LandingSections\n(Hero, Grid, Features)" as Sections <<boundary>> {
-  + render()
+class "LoginPage" <<boundary>> {
+  + onGoogleLoginClick()
 }
 
 class "AuthService" <<control>> {
-  + isAuthenticated(): boolean
+  + validateGoogleToken(token: string): boolean
+  + generateJWT(user: User): string
+}
+
+class "JWT" <<entity>> {
+  + token: string
+  + expiry: Date
 }
 
 class "User" <<entity>> {
-  + id: string
+  + email: string
   + role: string
-  + token: string
+  + registered: boolean
 }
 
-App --> Navbar : renders >
-App --> Home : renders >
-Navbar --> AuthService : checks auth >
-AuthService --> User : verifies session >
-Home --> Sections : renders sections >
+class "Retailer" <<entity>> {
+}
+
+class "Wholesaler" <<entity>> {
+}
+
+Retailer --|> User
+Wholesaler --|> User
+
+LoginPage --> AuthService : calls
+AuthService --> JWT : creates
+AuthService --> User : fetches/validates
 
 @enduml

@@ -1,5 +1,5 @@
 @startuml
-title TP-UC-001 – Login via Google (Design)
+title TP-UC-001 – Login via Google (Design – Final Version)
 
 skinparam style strictuml
 skinparam shadowing false
@@ -29,42 +29,67 @@ skinparam actor {
 
 actor Guest
 
-participant "LoginComponent" <<component>>
-control "AuthService" <<control>>
-entity "User" <<model>>
-entity "JWT" <<model>>
+participant "LoginComponent" as LoginComponent <<component>>
+control "AuthService" as AuthService <<control>>
+entity "User" as User <<model>>
+entity "JWT" as JWT <<model>>
 
+' Step 1: Guest initiates login
 Guest -> LoginComponent : Clicks "Login with Google"
 activate LoginComponent
 
+' Step 2–5: OAuth flow (external)
+note right of LoginComponent
+Handles Google OAuth via Auth0 SDK
+Google verifies identity and returns token.
+end note
+
+' Step 6: Send token to backend
 LoginComponent -> AuthService : validateGoogleToken(token)
 activate AuthService
 
-AuthService -> User : lookup/verify by email
-activate User
-User --> AuthService : user data
-deactivate User
+' Step 7: Token verification and user lookup
+alt Token is valid
+  AuthService -> User : lookup/verify by email
+  activate User
+  User --> AuthService : user data
+  deactivate User
 
-AuthService -> JWT : generate token
-activate JWT
-JWT --> AuthService : token object
-deactivate JWT
+  ' Step 8: Generate session token
+  AuthService -> JWT : generate token
+  activate JWT
+  JWT --> AuthService : token object
+  deactivate JWT
 
-AuthService --> LoginComponent : return JWT
-deactivate AuthService
+  AuthService --> LoginComponent : return JWT
+  deactivate AuthService
 
-LoginComponent -> LoginComponent : dispatchToken(jwt)
-LoginComponent --> Guest : redirect to dashboard
+  LoginComponent -> LoginComponent : dispatchToken(jwt)
+  LoginComponent --> Guest : redirect to dashboard
+
+else Token invalid or tampered
+  AuthService --> LoginComponent : show 403 error
+  deactivate AuthService
+end
+
+opt User closes login popup
+  Guest --> LoginComponent : cancel login
+  LoginComponent --> Guest : return to landing
+end
+
+opt Session creation fails
+  AuthService --> LoginComponent : show server error
+end
+
 deactivate LoginComponent
 
 note right of JWT
-Includes payload {email, role} and expiry timestamp.
-Used in all future API calls for authorization.
+Payload includes email, role, and expiry
+Used in all future authenticated API calls.
 end note
 
 note right of LoginComponent
-Uses Google OAuth client SDK to obtain token, 
-Stores JWT in Redux store.
+Stores JWT in Redux store for session management.
 end note
 
 @enduml
