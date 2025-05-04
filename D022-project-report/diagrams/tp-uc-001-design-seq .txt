@@ -16,6 +16,9 @@ skinparam participant {
   BackgroundColor<<model>> #E0FFE0
   BorderColor<<model>> #2E8B57
 
+  BackgroundColor<<token>> #FADBD8
+  BorderColor<<token>> #A93226
+
   FontName "Segoe UI"
   FontColor black
 }
@@ -29,67 +32,70 @@ skinparam actor {
 
 actor Guest
 
-participant "LoginComponent" as LoginComponent <<component>>
-control "AuthService" as AuthService <<control>>
-entity "User" as User <<model>>
-entity "JWT" as JWT <<model>>
+participant "LoginComponent" <<component>>
+participant "GoogleIDToken" <<token>>
+control "AuthService" <<control>>
+entity "User" <<model>>
+entity "JWT" <<token>>
 
-' Step 1: Guest initiates login
-Guest -> LoginComponent : Clicks "Login with Google"
+' === Flow Begins ===
+Guest -> LoginComponent : Click "Login with Google"
 activate LoginComponent
 
-' Step 2–5: OAuth flow (external)
-note right of LoginComponent
-Handles Google OAuth via Auth0 SDK
-Google verifies identity and returns token.
-end note
+LoginComponent -> LoginComponent : openGoogleLoginPopup()
+LoginComponent -> GoogleIDToken : obtain token via Auth0 SDK
+activate GoogleIDToken
+GoogleIDToken --> LoginComponent : id_token
+deactivate GoogleIDToken
 
-' Step 6: Send token to backend
-LoginComponent -> AuthService : validateGoogleToken(token)
+LoginComponent -> LoginComponent : temporarily store id_token
+
+LoginComponent -> AuthService : validateGoogleToken(id_token)
 activate AuthService
 
-' Step 7: Token verification and user lookup
-alt Token is valid
-  AuthService -> User : lookup/verify by email
+alt Valid token
+  AuthService -> User : findUserByEmail(token.email)
   activate User
-  User --> AuthService : user data
+  User --> AuthService : user object
   deactivate User
 
-  ' Step 8: Generate session token
-  AuthService -> JWT : generate token
+  AuthService -> JWT : generate custom JWT
   activate JWT
-  JWT --> AuthService : token object
+  JWT --> AuthService : jwt
   deactivate JWT
 
-  AuthService --> LoginComponent : return JWT
+  AuthService --> LoginComponent : return jwt
   deactivate AuthService
 
-  LoginComponent -> LoginComponent : dispatchToken(jwt)
+  LoginComponent -> LoginComponent : store jwt in Redux
   LoginComponent --> Guest : redirect to dashboard
 
-else Token invalid or tampered
+else Invalid or tampered token
   AuthService --> LoginComponent : show 403 error
   deactivate AuthService
+  LoginComponent -> LoginComponent : show error modal
 end
 
-opt User closes login popup
+opt User closes popup
   Guest --> LoginComponent : cancel login
   LoginComponent --> Guest : return to landing
 end
 
-opt Session creation fails
-  AuthService --> LoginComponent : show server error
+opt Session Creation Fails
+  AuthService --> LoginComponent : 500 error
+  LoginComponent -> LoginComponent : show failure screen
 end
 
 deactivate LoginComponent
 
-note right of JWT
-Payload includes email, role, and expiry
-Used in all future authenticated API calls.
+note right of LoginComponent
+Handles OAuth popup, token handling,
+state update (Redux), and redirection.
 end note
 
-note right of LoginComponent
-Stores JWT in Redux store for session management.
+note right of JWT
+Custom token issued by backend
+includes email, role, expiry.
 end note
 
 @enduml
