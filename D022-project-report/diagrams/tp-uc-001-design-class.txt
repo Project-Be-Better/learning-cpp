@@ -1,5 +1,5 @@
 @startuml
-title TP-UC-001 – Login via Google (Design Class Diagram with Frontend and Backend)
+title TP-UC-001 – Login via Google (Design)
 
 skinparam style strictuml
 skinparam shadowing false
