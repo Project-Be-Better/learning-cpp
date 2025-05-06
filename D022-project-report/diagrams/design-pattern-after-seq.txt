@@ -1,0 +1,41 @@
+@startuml
+title Sequence Diagram – Tightly Coupled Authentication and Role Handling
+
+actor User
+participant "LoginPage\n[Frontend]" as LoginPage
+participant "AuthService\n[Frontend]" as FrontAuthService
+participant "AuthController\n[Backend]" as AuthController
+participant "AuthFacadeService\n[Backend]" as AuthFacade
+participant "GoogleAuthStrategy\n[Strategy]" as Strategy
+participant "UserRepository\n[Store]" as UserRepo
+participant "TokenService\n[JWT Utility]" as TokenService
+participant "ReduxStore\n[Frontend Store]" as ReduxStore
+
+== Frontend Workflow ==
+
+User -> LoginPage : click Login (idToken)
+LoginPage -> FrontAuthService : login(idToken)
+FrontAuthService -> AuthController : POST /auth/login\n(idToken)
+
+== Backend Workflow ==
+
+AuthController -> AuthFacade : AuthenticateUser(idToken)
+AuthFacade -> Strategy : validateToken(idToken)
+Strategy --> AuthFacade : claims (email, name, etc.)
+
+AuthFacade -> UserRepo : findByEmail(email)
+alt user not found
+    AuthFacade -> UserRepo : save(user)
+end
+
+AuthFacade -> TokenService : generateJWT(user)
+TokenService --> AuthFacade : JWT
+
+AuthFacade --> AuthController : JWT
+AuthController --> FrontAuthService : JWT
+
+== Redux Update ==
+
+FrontAuthService -> ReduxStore : dispatch(loginSuccess(JWT))
+ReduxStore --> User : auth state updated
+@enduml
