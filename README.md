@@ -26,7 +26,7 @@
 | Day 20 | 2025-04-30 | Contiuing with Design Pattern (GoF) : Observer Pattern                                 | Done   | [D020 Summary](./D019-gof-observer/README.md)                     |
 | Day 21 | 2025-05-01 | Completed (GoF) : Adapter Pattern                                                      | Done   | [D021 Summary](./D021-gof-adapter/README.md)                      |
 | Day 22 | 2025-05-04 | University Sem 1 Report Submission                                                     | Done   | [D022 Summary](./D022-project-report/README.md)                   |
-| Day 23 | 2025-05-13 | Keywords and Naming Identifiers                                                        | Done   | [D023 Summary](./D023-keywords-identifiers/README.md)             |
+| Day 23 | 2025-05-13 | Keywords and Naming Identifiers + Whitespaces                                                       | Done   | [D023 Summary](./D023-keywords-identifiers/README.md)             |
 
 # Note :
 
