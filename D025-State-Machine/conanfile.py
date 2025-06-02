@@ -9,6 +9,7 @@ class ProjectTeletrackSimRecipe(ConanFile):
     generators = "CMakeToolchain", "CMakeDeps"
 
     def requirements(self):
+        self.requires("gtest/1.14.0")
         # you can add more Conan packages here when you need them:
         # self.requires("catch2/3.4.0")
         # self.requires("fmt/10.1.1")
