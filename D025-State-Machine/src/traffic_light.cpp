@@ -1,22 +1,14 @@
 #include "traffic_light.h"
 
-void enterRed()
-{
-    std::cout << "Entering 🔴 RED State \n";
-    std::cout << "\n";
-}
+// Entry functions
+void enterRed() { std::cout << "Entering 🔴 RED\n\n"; }
+void enterGreen() { std::cout << "Entering 🟢 GREEN\n\n"; }
+void enterYellow() { std::cout << "Entering 🟡 YELLOW\n\n"; }
 
-void enterGreen()
-{
-    std::cout << "Entering 🟢 GREEN State \n";
-    std::cout << "\n";
-}
-
-void enterYellow()
-{
-    std::cout << "Entering 🟡YELLOW State \n";
-    std::cout << "\n";
-}
+// Transition functions
+void toGreen() { std::cout << "Transition: RED -> GREEN\n"; }
+void toYellow() { std::cout << "Transition: GREEN -> YELLOW\n"; }
+void toRed() { std::cout << "Transition: YELLOW -> RED\n"; }
 
 void trafficLogic()
 {
@@ -39,19 +31,19 @@ void trafficLogic()
         switch (currentState)
         {
         case STATE_RED:
-            std::cout << "Transitioning to Green \n";
+            toGreen();
             currentState = STATE_GREEN;
             enterGreen();
             break;
 
         case STATE_GREEN:
-            std::cout << "Transitioning to Yellow \n";
+            toYellow();
             currentState = STATE_YELLOW;
             enterYellow();
             break;
 
         case STATE_YELLOW:
-            std::cout << "Transitioning to Red \n";
+            toRed();
             currentState = STATE_RED;
             enterRed();
             break;

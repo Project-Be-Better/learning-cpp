@@ -16,11 +16,13 @@ enum StateID
     STATE_YELLOW
 };
 
-typedef void (*StateHandler)();
-
 void enterRed();
 void enterGreen();
 void enterYellow();
+
+void toGreen();
+void toYellow();
+void toRed();
 
 void trafficLogic();
 #endif // !TRAFFIC_LIGHT_H
