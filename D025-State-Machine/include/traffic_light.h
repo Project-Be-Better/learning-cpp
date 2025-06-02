@@ -16,6 +16,15 @@ enum StateID
     STATE_YELLOW
 };
 
+typedef void (*TransitionFunction)();
+
+struct Transition
+{
+    Event event;
+    StateID targetState;
+    TransitionFunction action;
+};
+
 void enterRed();
 void enterGreen();
 void enterYellow();

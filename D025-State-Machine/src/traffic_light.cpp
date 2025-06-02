@@ -10,6 +10,14 @@ void toGreen() { std::cout << "Transition: RED -> GREEN\n"; }
 void toYellow() { std::cout << "Transition: GREEN -> YELLOW\n"; }
 void toRed() { std::cout << "Transition: YELLOW -> RED\n"; }
 
+// Transition functions
+Transition redTransitions[] = {
+    {EVT_TIMER_EXPIRE, STATE_GREEN, toGreen}};
+
+Transition greenTransitions[] = {{EVT_TIMER_EXPIRE, STATE_YELLOW, toYellow}};
+
+Transition yellowTransitions[] = {{EVT_TIMER_EXPIRE, STATE_RED, toRed}};
+
 void trafficLogic()
 {
     std::cout << "🚦 Traffic Light State Machine \n";
@@ -23,33 +31,33 @@ void trafficLogic()
     // GREEN to YELLOW
     // YELLOW to RED
 
-    for (int i = 0; i < 3; ++i)
-    {
-        Event event = EVT_TIMER_EXPIRE;
-        std::cout << "Event : EVT_TIMER_EXPIRE received \n";
+    // for (int i = 0; i < 3; ++i)
+    // {
+    //     Event event = EVT_TIMER_EXPIRE;
+    //     std::cout << "Event : EVT_TIMER_EXPIRE received \n";
 
-        switch (currentState)
-        {
-        case STATE_RED:
-            toGreen();
-            currentState = STATE_GREEN;
-            enterGreen();
-            break;
+    //     switch (currentState)
+    //     {
+    //     case STATE_RED:
+    //         toGreen();
+    //         currentState = STATE_GREEN;
+    //         enterGreen();
+    //         break;
 
-        case STATE_GREEN:
-            toYellow();
-            currentState = STATE_YELLOW;
-            enterYellow();
-            break;
+    //     case STATE_GREEN:
+    //         toYellow();
+    //         currentState = STATE_YELLOW;
+    //         enterYellow();
+    //         break;
 
-        case STATE_YELLOW:
-            toRed();
-            currentState = STATE_RED;
-            enterRed();
-            break;
+    //     case STATE_YELLOW:
+    //         toRed();
+    //         currentState = STATE_RED;
+    //         enterRed();
+    //         break;
 
-        default:
-            break;
-        }
-    }
+    //     default:
+    //         break;
+    //     }
+    // }
 }
